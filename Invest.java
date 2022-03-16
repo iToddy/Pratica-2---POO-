@@ -1,6 +1,10 @@
 package pratica2;
 
+import java.util.Scanner;
+
 public class Invest {
+	
+	Scanner entrada = new Scanner(System.in);
 
 	int inicialInvest;
 	float taxa;
@@ -37,7 +41,15 @@ public class Invest {
 	}
 
 
-	public void showInvest() {
+	public float showInvest() {
+		
+		float finalInvest = this.inicialInvest;
+		for (int i = 0; i < this.numMeses; i++) {
+			finalInvest = finalInvest + (finalInvest * this.taxa);
+		}
+		
+		return finalInvest;
+		
 		
 	}
 
